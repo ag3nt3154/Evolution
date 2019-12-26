@@ -22,13 +22,13 @@ random.seed(time.time())
 
 class Food:
     
-    def __init__(self, displaysurf):
+    def __init__(self):
         self.size = 3
-        self.pos = np.ndarray(random.randint(0, 1600 - self.size), random.randint(0, 900 - self.size))
-        self.displaysurf = displaysurf
+        self.pos = np.array([random.randint(0, 1600 - self.size), random.randint(0, 900 - self.size)])
         
         
-    def show(self):
-        pygame.draw.rect(self.displaysurf, white, (self.pos[0], self.pos[1], self.size, self.size))
+        
+    def show(self, displaysurf):
+        pygame.draw.rect(displaysurf, white, (self.pos[0], self.pos[1], self.size, self.size))
         
     

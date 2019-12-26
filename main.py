@@ -1,7 +1,7 @@
 import grimoire
 import pygame
 from pygame.locals import *
-from organisms import Food
+from organisms import *
 
 # Initialise pygame window
 pygame.init()
@@ -30,7 +30,8 @@ while True:
     pygame.draw.line(displaysurf, white, (1400, 0), (1400, 900), 1)
 
     # Main section for displayed content
-    
+    food1 = Food()
+    food1.show(displaysurf)
 
 
 
@@ -39,6 +40,7 @@ while True:
 
     # Event loop
     for event in pygame.event.get():
+        # Press [esc] to exit
         if event.type == KEYDOWN:
             if event.__dict__['key'] == 27:
                 status = "quit_game"
