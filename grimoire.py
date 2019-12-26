@@ -47,4 +47,6 @@ def count_line(file_name):
     
     
 def print_frame(item_list):
-    return
+    clear_disp()
+    
+    return True
